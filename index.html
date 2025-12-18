@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Personal Page</title>
         <link rel="stylesheet" href="./asset/css/reset.css" />
@@ -115,7 +116,7 @@
                             class="logo"
                         />
                     </a>
-                    <ul class="menu">
+                    <ul id="pc-nav" class="menu">
                         <li class="menu__item">
                             <a href="#!" class="menu__link">Projects</a>
                         </li>
@@ -129,6 +130,66 @@
                             <a href="#!" class="menu__link">Contact</a>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </header>
+        <header class="mobile-header">
+            <a href="#">
+                <img
+                    src="./asset/img/logo-nav.png"
+                    alt="LOGO"
+                    class="logo-mobile"
+                />
+            </a>
+
+            <div class="button-mobile">
+                <span class="email__img">
+                    <img src="./asset/img/email-nav.png" alt="email-icon" />
+                </span>
+                <div class="menu-mobile">
+                    <input
+                        type="checkbox"
+                        name="checkbox"
+                        id="menu-checkbox"
+                        class="menu-hidden"
+                    />
+                    <label for="menu-checkbox" class="menu-overlay">
+                        <svg
+                            width="17"
+                            height="8"
+                            viewBox="0 0 17 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1 7H16"
+                                stroke="#5D3BEE"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M1 1H16"
+                                stroke="#5D3BEE"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </label>
+                    <label
+                        for="menu-checkbox"
+                        class="menu-screen-overlay"
+                    ></label>
+                    <div class="menu-drawer">
+                        <ul id="mobi-nav"></ul>
+                        <script>
+                            const pcNav = document.querySelector("#pc-nav");
+                            const mobiNav = document.querySelector("#mobi-nav");
+
+                            mobiNav.innerHTML = pcNav.innerHTML;
+                        </script>
+                    </div>
                 </div>
             </div>
         </header>
@@ -148,19 +209,23 @@
                     <div class="container">
                         <div class="hero__container">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div
+                                    class="hero__img--wapper col-md-6 col-sm-12 col-12"
+                                >
                                     <img
                                         src="./asset/img/hero-img.png"
                                         alt=""
                                         class="hero-img"
                                     />
                                 </div>
-                                <div class="offset-md-1 col-md-5">
+                                <div
+                                    class="hero__content--wapper offset-md-1 col-md-5 col-sm-12 col-12"
+                                >
                                     <div class="hero__content">
                                         <h1 class="hero__title">
                                             An Interactive Designer
                                         </h1>
-                                        <p class="hero__desc">
+                                        <p class="hero__desc font__desc">
                                             Lorem ipsum dolor sit amet,
                                             consectetur adipiscing elit. In
                                             urna, non nisl tincidunt ut
@@ -185,9 +250,9 @@
                 <div class="container">
                     <section class="client-section">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-12 col-12">
                                 <div class="client__header">
-                                    <h2 class="client__title">
+                                    <h2 class="client__title font__title">
                                         Meet my <br />
                                         recent clients
                                     </h2>
@@ -195,64 +260,89 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="client__grid">
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Google.png"
-                                            alt="Google"
-                                            class="client-logo"
-                                        />
-                                    </div>
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/warner bros.png"
-                                            alt="Warner Bros"
-                                            class="client-logo"
-                                        />
-                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-12">
+                                            <div class="row">
+                                                <div
+                                                    class="col-md-6 col-sm-6 col-6"
+                                                >
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Google.png"
+                                                            alt="Google"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Upwork.png"
+                                                            alt="Upwork"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-md-6 col-sm-6 col-6"
+                                                >
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/warner bros.png"
+                                                            alt="Warner Bros"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Creative cloude.png"
+                                                            alt="Creative Cloud"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-12">
+                                            <div class="row">
+                                                <div
+                                                    class="col-md-6 col-sm-6 col-6"
+                                                >
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Mailchamp.png"
+                                                            alt="Mailchimp"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Woocommercde.png"
+                                                            alt="Woocommerce"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                </div>
 
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Mailchamp.png"
-                                            alt="Mailchimp"
-                                            class="client-logo"
-                                        />
-                                    </div>
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Adobe.png"
-                                            alt="Adobe"
-                                            class="client-logo"
-                                        />
-                                    </div>
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Upwork.png"
-                                            alt="Upwork"
-                                            class="client-logo"
-                                        />
-                                    </div>
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Creative cloude.png"
-                                            alt="Creative Cloud"
-                                            class="client-logo"
-                                        />
-                                    </div>
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Woocommercde.png"
-                                            alt="Woocommerce"
-                                            class="client-logo"
-                                        />
-                                        <spa/span>
-                                    </div>
+                                                <div
+                                                    class="col-md-6 col-sm-6 col-6"
+                                                >
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Adobe.png"
+                                                            alt="Adobe"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
 
-                                    <div class="client__item">
-                                        <img
-                                            src="./asset/img/Canva.png"
-                                            alt="Canva"
-                                            class="client-logo"
-                                        />
+                                                    <div class="client__item">
+                                                        <img
+                                                            src="./asset/img/Canva.png"
+                                                            alt="Canva"
+                                                            class="client-logo"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -264,8 +354,10 @@
                 <div class="container">
                     <section class="specialities-section">
                         <div class="specialities__header">
-                            <h2 class="specialities__title">Specialities</h2>
-                            <p class="specialities__desc">
+                            <h2 class="specialities__title font__title">
+                                Specialities
+                            </h2>
+                            <p class="specialities__desc font__desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, <br />
                                 non nisl tincidunt ut elementum turpis.
@@ -274,7 +366,7 @@
 
                         <div class="specialities__grid">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-12">
                                     <div class="speciality__card">
                                         <div class="speciality__icon--wrapper">
                                             <img
@@ -294,7 +386,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-12">
                                     <div class="speciality__card">
                                         <div class="speciality__icon--wrapper">
                                             <img
@@ -314,7 +406,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-12">
                                     <div class="speciality__card">
                                         <div class="speciality__icon--wrapper">
                                             <img
@@ -343,14 +435,16 @@
                     <section class="project__section">
                         <div class="project__header">
                             <div class="row">
-                                <div class="col-md-5">
-                                    <h2 class="project__title">
+                                <div class="col-md-5 col-sm-12 col-12">
+                                    <h2 class="project__title font__title">
                                         Take a look at <br />
                                         my recent projects
                                     </h2>
                                 </div>
-                                <div class="offset-md-1 col-md-6">
-                                    <p class="project__subtitle">
+                                <div
+                                    class="offset-md-1 col-md-6 col-sm-12 col-12"
+                                >
+                                    <p class="project__subtitle font__desc">
                                         Lorem ipsum dolor sit amet, consectetur
                                         <br />
                                         adipiscing elit. In urna, non nisl
@@ -362,7 +456,9 @@
                         </div>
 
                         <div class="project__grid">
-                            <div class="row row-cols-sm-2">
+                            <div
+                                class="row row-cols-md-2 row-cols-sm-1 row-cols-1"
+                            >
                                 <div class="col">
                                     <article class="project__card">
                                         <div class="project__card--background">
@@ -374,7 +470,7 @@
                                             <h3 class="project__name">
                                                 Wally Website
                                             </h3>
-                                            <p class="project__desc">
+                                            <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -403,7 +499,7 @@
                                             <h3 class="project__name">
                                                 Banking App
                                             </h3>
-                                            <p class="project__desc">
+                                            <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -431,7 +527,7 @@
                                             <h3 class="project__name">
                                                 Web App
                                             </h3>
-                                            <p class="project__desc">
+                                            <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -459,7 +555,7 @@
                                             <h3 class="project__name">
                                                 Oculus Website
                                             </h3>
-                                            <p class="project__desc">
+                                            <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
                                             </p>
@@ -496,10 +592,10 @@
                                     👋
                                 </span>
                             </p>
-                            <h2 class="interactive__title">
+                            <h2 class="interactive__title font__title">
                                 Interactive Designer
                             </h2>
-                            <p class="interactive__desc">
+                            <p class="interactive__desc font__desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, non <br />
                                 nisl tincidunt ut elementum turpis.
@@ -507,7 +603,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="offset-md-1 col-md-10 col-sm-12">
+                            <div class="offset-md-1 col-md-10 col-sm-12 col-12">
                                 <div class="interactive__stat">
                                     <div class="interactive__stat--item">
                                         <h3 class="interactive__stat--number">
@@ -589,8 +685,10 @@
                 <div class="container">
                     <section class="evaluate__section">
                         <div class="evaluate__header">
-                            <h2 class="evaluate__title">What people says</h2>
-                            <p class="evaluate__subtitle">
+                            <h2 class="evaluate__title font__title">
+                                What people says
+                            </h2>
+                            <p class="evaluate__subtitle font__desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, non <br />
                                 nisl tincidunt ut elementum turpis.
@@ -638,9 +736,9 @@
             <div class="faq">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-10 col-sm-12">
+                        <div class="col-md-10 col-sm-12 col-12">
                             <section class="faq__section">
-                                <h2 class="faq__title">
+                                <h2 class="faq__title font__title">
                                     A few questions <br />
                                     clients normally ask me
                                 </h2>
@@ -658,7 +756,7 @@
                                                     projects ?
                                                 </h3>
 
-                                                <p class="faq__desc">
+                                                <p class="faq__desc font__desc">
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipiscing elit.
                                                     In urna, non nisl tincidunt
@@ -715,7 +813,7 @@
                                                     take on?
                                                 </h3>
 
-                                                <p class="faq__desc">
+                                                <p class="faq__desc font__desc">
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipiscing elit.
                                                     In urna, non nisl tincidunt
@@ -771,7 +869,7 @@
                                                     How do you charge for
                                                     projects ?
                                                 </h3>
-                                                <p class="faq__desc">
+                                                <p class="faq__desc font__desc">
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipiscing elit.
                                                     In urna, non nisl tincidunt
@@ -827,7 +925,7 @@
                                                     What time-zone do you work
                                                     in?
                                                 </h3>
-                                                <p class="faq__desc">
+                                                <p class="faq__desc font__desc">
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipiscing elit.
                                                     In urna, non nisl tincidunt
@@ -883,7 +981,7 @@
                                                     How often can we
                                                     communicate?
                                                 </h3>
-                                                <p class="faq__desc">
+                                                <p class="faq__desc font__desc">
                                                     Lorem ipsum dolor sit amet,
                                                     consectetur adipiscing elit.
                                                     In urna, non nisl tincidunt
@@ -937,8 +1035,10 @@
                 <div class="container">
                     <section class="atmosphere-section">
                         <header class="atmosphere__header">
-                            <h2 class="atmosphere__title">My atmosphere</h2>
-                            <p class="atmosphere__desc">
+                            <h2 class="atmosphere__title font__title">
+                                My atmosphere
+                            </h2>
+                            <p class="atmosphere__desc font__desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, <br />
                                 non nisl tincidunt ut elementum turpis.
@@ -950,7 +1050,7 @@
 
                         <div class="atmosphere__gallery">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-12">
                                     <div class="atmosphere__column">
                                         <div class="atmosphere__img--wrapper">
                                             <img
@@ -962,7 +1062,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-12">
                                     <div class="atmosphere__column">
                                         <div class="atmosphere__img--wrapper">
                                             <img
@@ -974,7 +1074,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-12">
                                     <div class="atmosphere__column">
                                         <div class="atmosphere__img--wrapper">
                                             <img
@@ -1017,11 +1117,11 @@
                                 />
                             </div>
 
-                            <h2 class="contact__title">
+                            <h2 class="contact__title font__title">
                                 Got a project? Let’s talk
                             </h2>
 
-                            <p class="contact__desc">
+                            <p class="contact__desc font__desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, non <br />
                                 nisl tincidunt ut elementum turpis.

@@ -1,5 +1,8 @@
 /* ===== Desktop >= 992px ===== */
 @media (min-width: 992px) {
+    .mobile-header {
+        display: none;
+    }
 }
 
 /* ===== Tablet & Mobile < 992px ===== */
@@ -8,8 +11,342 @@
 
 /* ===== Mobile <= 767.98px ===== */
 @media (max-width: 767.98px) {
+    .container {
+        width: 100% !important;
+    }
+
     .client__grid {
         margin-top: 42px;
         grid-template-columns: repeat(2, min-content);
+    }
+    .header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .button-mobile {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .menu-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid #5d3bee33;
+        border-radius: 50%;
+        transition: box-shadow 0.4s ease;
+    }
+    .menu-screen-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    .menu-hidden {
+        display: none;
+    }
+    .menu-drawer {
+        position: fixed;
+        top: 0;
+        inset: 0 0 0 40%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+    }
+    .mobi-nav {
+        flex-direction: column;
+    }
+    .menu__item {
+        margin-left: auto;
+        margin-top: 30px;
+    }
+    .menu-hidden:checked ~ .menu-overlay {
+        border-color: #5d3bee;
+        box-shadow: 0 0 10px rgba(93, 59, 238, 0.2);
+    }
+    .menu-hidden:checked ~ .menu-screen-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .menu-hidden:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+    .hero-background__01,
+    .hero-background__02 {
+        display: none;
+    }
+    .hero__title {
+        font-size: 4.2rem !important;
+    }
+    .hero__img--wapper {
+        margin-top: 20px;
+        order: 1;
+    }
+    .hero__content {
+        margin-top: 50px !important;
+    }
+
+    .client__header::before {
+        left: 50%;
+        top: -15px !important;
+        transform: translateX(-50%);
+    }
+    .client__title {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    .client__header {
+    }
+    .client__grid {
+        margin-left: 0 !important;
+        grid-template-columns: repeat(2, min-content) !important;
+    }
+    .faq__question {
+        font-size: 2.4rem !important;
+    }
+    .specialities__grid .row {
+        display: flex;
+        flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+        overflow-x: auto; /* Cho phép cuộn ngang */
+        scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+        gap: 15px; /* Khoảng cách giữa các thẻ */
+        padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+        -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+    }
+
+    /* 2. Tác động vào từng cột card */
+    .specialities__grid .col-sm-12 {
+        scroll-snap-align: start; /* Điểm dừng khi cuộn */
+    }
+    /* Ẩn thanh cuộn để giao diện sạch hơn (tùy chọn) */
+    .specialities__grid .row::-webkit-scrollbar {
+        display: none;
+    }
+    .project__subtitle,
+    .project__title {
+        text-align: center;
+    }
+    .atmosphere__gallery .row {
+        display: flex;
+        flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+        overflow-x: auto; /* Cho phép cuộn ngang */
+        scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+        gap: 15px; /* Khoảng cách giữa các thẻ */
+        padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+        -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+    }
+    .atmosphere__gallery .col-sm-12 {
+        scroll-snap-align: start; /* Điểm dừng khi cuộn */
+    }
+    .atmosphere__gallery .row::-webkit-scrollbar {
+        display: none;
+    }
+    .container-header {
+        width: 100% !important;
+    }
+    .contact__background--03,
+    .contact__background--01 {
+        display: none !important;
+    }
+    .contact__background--02 {
+        left: -150px !important;
+    }
+    .footer {
+        display: none;
+    }
+}
+@media (max-width: 575.98px) {
+    .container {
+        width: 100% !important;
+    }
+    .font__title {
+        font-size: 3.6rem !important;
+        line-height: 4.2rem !important;
+    }
+    .font__desc {
+        font-size: 1.6rem !important;
+        line-height: 2.6rem !important;
+    }
+    .client__grid {
+        margin-top: 42px;
+        grid-template-columns: repeat(2, min-content);
+    }
+    .header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .button-mobile {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .menu-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid #5d3bee33;
+        border-radius: 50%;
+        transition: box-shadow 0.4s ease;
+    }
+    .menu-screen-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    .menu-hidden {
+        display: none;
+    }
+    .menu-drawer {
+        position: fixed;
+        top: 0;
+        inset: 0 0 0 75%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+    }
+    .mobi-nav {
+        flex-direction: column;
+    }
+    .menu__item {
+        margin-left: auto;
+        margin-top: 30px;
+    }
+    .menu-hidden:checked ~ .menu-overlay {
+        border-color: #5d3bee;
+        box-shadow: 0 0 10px rgba(93, 59, 238, 0.2);
+    }
+    .menu-hidden:checked ~ .menu-screen-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .menu-hidden:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+    .hero-background__01,
+    .hero-background__02 {
+        display: none;
+    }
+    .hero__title {
+        font-size: 4.2rem !important;
+    }
+    .hero__img--wapper {
+        order: 1;
+    }
+    .hero__content {
+        margin-top: 50px !important;
+    }
+    .hero-img {
+        transform: scale(0.55);
+    }
+    .client__header::before {
+        left: 50%;
+        top: -15px !important;
+        transform: translateX(-50%);
+    }
+    .client__title {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    .client__header {
+    }
+    .client__grid {
+        margin-left: 0 !important;
+        grid-template-columns: repeat(2, min-content) !important;
+    }
+    .faq__question {
+        font-size: 2.4rem !important;
+    }
+    .specialities__grid .row {
+        display: flex;
+        flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+        overflow-x: auto; /* Cho phép cuộn ngang */
+        scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+        gap: 15px; /* Khoảng cách giữa các thẻ */
+        padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+        -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+    }
+
+    /* 2. Tác động vào từng cột card */
+    .specialities__grid .col-sm-12 {
+        scroll-snap-align: start; /* Điểm dừng khi cuộn */
+    }
+    /* Ẩn thanh cuộn để giao diện sạch hơn (tùy chọn) */
+    .specialities__grid .row::-webkit-scrollbar {
+        display: none;
+    }
+    .project__subtitle,
+    .project__title {
+        text-align: center;
+    }
+    .interactive__title {
+        text-align: center;
+    }
+    .interactive__stat {
+        width: 100% !important;
+    }
+    .atmosphere__gallery .row {
+        display: flex;
+        flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+        overflow-x: auto; /* Cho phép cuộn ngang */
+        scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+        gap: 15px; /* Khoảng cách giữa các thẻ */
+        padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+        -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+    }
+    .atmosphere__gallery .col-sm-12 {
+        scroll-snap-align: start; /* Điểm dừng khi cuộn */
+    }
+    .atmosphere__gallery .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .container-header {
+        width: 100% !important;
+    }
+    .contact__background--03,
+    .contact__background--01 {
+        display: none !important;
+    }
+    .contact__background--02 {
+        left: -150px !important;
+    }
+
+    .footer {
+        display: none;
     }
 }

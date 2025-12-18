@@ -29,7 +29,15 @@ a {
     font-size: 1.8rem;
     font-weight: 700;
 }
-
+.font__title {
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 6.6rem; /* 117.857% */
+    letter-spacing: -0.224rem;
+}
+.font__desc {
+    font-size: 1.8rem;
+}
 .header {
     padding-top: 20px;
     background: #fbfaff;
@@ -123,6 +131,7 @@ a {
 .menu__item:hover {
     transform: translateY(-3px);
 }
+/* mobile */
 
 .hero-header {
     padding-top: 44px;
@@ -158,7 +167,7 @@ a {
 .hero__desc {
     margin-top: 20px;
     color: #51586a;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
     width: 370px;
 }
@@ -184,6 +193,12 @@ a {
     line-height: 5rem; /* 119.048% */
     letter-spacing: -0.168rem;
 }
+.client__grid {
+    margin-left: 70px;
+}
+.client__item {
+    margin-bottom: 36px;
+}
 .client__header {
     position: relative;
 }
@@ -196,13 +211,7 @@ a {
     height: 2px;
     background: #5d3bee;
 }
-.client__grid {
-    margin-left: 70px;
-    display: grid;
-    grid-template-columns: repeat(4, min-content);
-    justify-content: space-between;
-    row-gap: 41px;
-}
+
 .specialities {
     margin-top: 133px;
 }
@@ -210,10 +219,7 @@ a {
 .specialities__title {
     margin-top: 20px;
     color: #080415;
-    font-size: 5.6rem;
-    font-weight: 500;
-    line-height: 6.6rem; /* 117.857% */
-    letter-spacing: -0.224rem;
+
     text-align: center;
 }
 .specialities__desc {
@@ -254,7 +260,7 @@ a {
 .speciality__text {
     margin-top: 15px;
     color: #51586a;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
 }
 .project {
@@ -264,16 +270,12 @@ a {
 }
 .project__title {
     color: #fff;
-    font-size: 5.6rem;
-    font-weight: 500;
-    line-height: 6.6rem; /* 117.857% */
-    letter-spacing: -0.224rem;
 }
 .project__subtitle {
     margin-left: 28px;
     margin-top: 31px;
     color: #fff;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
 }
 .project__grid {
@@ -308,7 +310,6 @@ a {
 .project__link {
     display: block;
     margin-top: 20px;
-
     color: #080415;
     font-size: 1.8rem;
     font-weight: 700;
@@ -334,7 +335,7 @@ a {
     color: #080415;
 }
 .interactive {
-    padding: 140px;
+    padding: 140px 0;
 }
 .interactive__greeting {
     color: #5d3bee;
@@ -345,15 +346,12 @@ a {
 .interactive__title {
     margin-top: 10px;
     color: #080415;
-    font-size: 5.6rem;
-    font-weight: 500;
-    text-align: center;
 }
 .interactive__desc {
     margin-top: 15px;
     color: #51586a;
     text-align: center;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
 }
 .interactive__stat {
@@ -383,7 +381,7 @@ a {
 }
 .interactive__stat--label {
     color: #51586a;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
 }
 .interactive__video {
@@ -442,7 +440,7 @@ a {
     background: #fff;
 
     color: #51586a;
-    font-size: 1.8rem;
+
     font-weight: 700;
 }
 .evaluate {
@@ -462,9 +460,7 @@ a {
 }
 .evaluate__title {
     color: #080415;
-    font-size: 5.6rem;
-    font-weight: 500;
-    letter-spacing: -0.224rem;
+
     text-align: center;
 }
 .evaluate__subtitle {
@@ -549,10 +545,6 @@ a {
 }
 .faq__title {
     color: #080415;
-    font-size: 5.6rem;
-    font-weight: 500;
-    line-height: 6.6rem; /* 117.857% */
-    letter-spacing: -0.224rem;
 }
 .faq__list {
     margin-top: 20px;
@@ -579,7 +571,7 @@ a {
     display: none;
     width: 60%;
     color: #51586a;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
     transition: all 0.5s ease;
 }
@@ -624,7 +616,6 @@ a {
 .faq__btn--line.vertical {
     transform: rotate(90deg); /* Dấu cộng */
 }
-
 .hidden-check {
     display: none;
 }
@@ -651,15 +642,12 @@ a {
 .atmosphere__title {
     color: #080415;
     text-align: center;
-    font-size: 5.6rem;
-    font-weight: 500;
-    letter-spacing: -0.224rem;
 }
 .atmosphere__desc {
     margin-top: 20px;
     color: #51586a;
     text-align: center;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
 }
 .atmosphere__link {
@@ -719,16 +707,12 @@ a {
     margin-top: 10px;
     color: #080415;
     text-align: center;
-    font-size: 5.6rem;
-    font-weight: 500;
-    line-height: 6.6rem;
-    letter-spacing: -0.224rem;
 }
 .contact__desc {
     margin-top: 20px;
     color: #51586a;
     text-align: center;
-    font-size: 1.8rem;
+
     line-height: 3rem; /* 166.667% */
 }
 .contact__btn {
