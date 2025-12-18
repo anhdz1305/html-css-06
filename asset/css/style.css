@@ -539,4 +539,197 @@ a {
     border-radius: 50%;
     border: 3px solid #fff; /* Tạo khoảng trắng bên trong */
     outline: 1px solid #5d3bee; /* Vòng tròn tím ngoài cùng */
+    background-clip: content-box;
+}
+.faq {
+    padding-top: 95px;
+}
+.faq__title {
+    color: #080415;
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 6.6rem; /* 117.857% */
+    letter-spacing: -0.224rem;
+}
+.faq__list {
+    margin-top: 20px;
+}
+.faq__item {
+    margin-top: 60px;
+    padding-bottom: 21px;
+    border-bottom: 2px solid #08182f;
+}
+.faq__question--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq__question {
+    color: #080415;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4rem; /* 125% */
+    letter-spacing: -0.128rem;
+    margin-bottom: 23px;
+}
+.faq__desc {
+    display: none;
+    width: 60%;
+    color: #51586a;
+    font-size: 1.8rem;
+    line-height: 3rem; /* 166.667% */
+    transition: all 0.5s ease;
+}
+
+/* btn */
+
+.faq__btn {
+    width: 50px;
+    height: 50px;
+
+    /* Ngăn Flexbox làm co nút bấm */
+    flex-shrink: 0;
+
+    /* Đảm bảo luôn là hình tròn */
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+
+    border: 2px solid #5d3bee33;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    stroke: #161a1c;
+}
+
+.icon-wrapper {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq__btn--line {
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+.faq__btn--line.vertical {
+    transform: rotate(90deg); /* Dấu cộng */
+}
+
+.hidden-check {
+    display: none;
+}
+.hidden-check:checked ~ .faq__question--container .faq__question .faq__desc {
+    display: block;
+}
+
+.hidden-check:checked ~ .faq__question--container .faq__btn--line.vertical {
+    transform: rotate(0);
+}
+.hidden-check:checked ~ .faq__question--container .faq__btn {
+    color: #5d3bee; /* stroke dùng currentColor sẽ nhận màu này */
+    border-color: #5d3bee;
+}
+.hidden-check:checked
+    ~ .faq__question--container
+    .faq__question
+    .faq__question {
+    color: #5d3bee;
+}
+.atmosphere {
+    margin-top: 160px;
+}
+.atmosphere__title {
+    color: #080415;
+    text-align: center;
+    font-size: 5.6rem;
+    font-weight: 500;
+    letter-spacing: -0.224rem;
+}
+.atmosphere__desc {
+    margin-top: 20px;
+    color: #51586a;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3rem; /* 166.667% */
+}
+.atmosphere__link {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    color: #5d3bee;
+    font-family: "DM Sans";
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4rem; /* 125% */
+    letter-spacing: -0.128rem;
+    text-decoration: underline solid #5d3bee; /* line, style, color */
+    text-underline-offset: auto;
+    text-decoration-thickness: auto;
+}
+.atmosphere__gallery {
+    margin-top: 70px;
+}
+.atmosphere__img {
+    width: 100%;
+    height: 529px;
+    object-fit: cover;
+}
+.contact {
+    margin-top: 140px;
+}
+.contact__section {
+    padding: 68px 0;
+    height: 488px;
+    background: #fbfaff;
+    position: relative;
+}
+.contact__background--01 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.contact__background--02 {
+    position: absolute;
+    left: 140px;
+
+    left: 239;
+    bottom: 0;
+}
+.contact__background--03 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.contact__emoji {
+    display: flex;
+    justify-content: center;
+}
+.contact__title {
+    margin-top: 10px;
+    color: #080415;
+    text-align: center;
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 6.6rem;
+    letter-spacing: -0.224rem;
+}
+.contact__desc {
+    margin-top: 20px;
+    color: #51586a;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3rem; /* 166.667% */
+}
+.contact__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
