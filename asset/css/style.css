@@ -11,6 +11,7 @@ body {
     font-size: 1.6rem;
     font-family: "DM Sans", sans-serif;
 }
+
 a {
     text-decoration: none;
 }
@@ -37,7 +38,7 @@ a {
 .sticky {
     position: sticky;
     top: -20px;
-    z-index: 10;
+    z-index: 9999;
 }
 .container-header {
     width: 1330px;
@@ -46,15 +47,14 @@ a {
 }
 .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.email-nav {
+.email {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.email-nav__img {
+.email__img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,11 +64,11 @@ a {
     border-radius: 50%;
     transition: box-shadow 0.4s ease;
 }
-.email-nav__img img {
+.email__img img {
     transition: transform 0.4s ease;
 }
 
-.email-nav__text {
+.email__text {
     margin-left: 10px;
     color: #080415;
     font-family: "DM Sans";
@@ -85,39 +85,42 @@ a {
     background-size: 0% 2px; /* Ban đầu chiều rộng bằng 0 */
     transition: background-size 0.4s ease;
 }
-.email-nav:hover .email-nav__img {
+.email:hover .email__img {
     box-shadow: 0 0 12px rgb(93, 59, 238, 0.6);
 }
-.email-nav:hover .email-nav__img img {
+.email:hover .email__img img {
     transform: scale(1.2) rotate(-5deg);
 }
-.email-nav:hover .email-nav__text {
+.email:hover .email__text {
     background-size: 100% 2px;
 }
 
-.logo-nav {
+.logo {
+    margin-left: 357px;
     transition: transform 0.4s ease;
 }
 
-.logo-nav:hover {
+.logo:hover {
     transform: scale(1.1) rotate(-5deg);
 }
 
-.menu-nav {
+.menu {
+    margin-left: 223px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 48px;
 }
-.menu-nav__link {
-    padding: 4px 22px;
+.menu__link {
+    padding: 4px 0;
     color: #51586a;
     font-family: "DM Sans";
     font-size: 1.8rem;
 }
-.menu-nav__item {
+.menu__item {
     transition: transform 0.4s ease;
 }
-.menu-nav__item:hover {
+.menu__item:hover {
     transform: translateY(-3px);
 }
 
@@ -542,7 +545,7 @@ a {
     background-clip: content-box;
 }
 .faq {
-    padding-top: 95px;
+    margin-top: 95px;
 }
 .faq__title {
     color: #080415;
@@ -700,7 +703,7 @@ a {
     position: absolute;
     left: 140px;
 
-    left: 239;
+    left: 239px;
     bottom: 0;
 }
 .contact__background--03 {
@@ -732,4 +735,36 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+}
+.footer {
+    padding: 50px 0 30px;
+}
+.footer-content {
+    width: 1429px;
+    padding-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #0c072033;
+}
+.footer__copyright {
+    margin-top: 18px;
+}
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #525771;
+}
+.copyright__link {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+.copyright__link--rect {
+    content: "";
+    display: inline-block;
+    height: 14px;
+    width: 1px;
+    background: #525771;
 }
