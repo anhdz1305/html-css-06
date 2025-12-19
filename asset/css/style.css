@@ -1028,10 +1028,9 @@ a {
     margin-top: 140px;
 }
 .contact__section {
-    padding: 68px 0;
-
-    background: #fbfaff;
     position: relative;
+    padding: 68px 0;
+    background: #fbfaff;
     overflow: hidden;
 }
 .contact__background--01 {
@@ -1039,10 +1038,14 @@ a {
     left: 0;
     bottom: 0;
 }
+.bg-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
 .contact__background--02 {
     position: absolute;
     left: 140px;
-
     left: 239px;
     bottom: 0;
 }
