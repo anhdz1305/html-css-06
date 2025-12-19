@@ -315,14 +315,10 @@ a {
     font-weight: 700;
     margin-top: 20px;
 }
-.project__image--container {
+
+.project__image {
     width: 246px;
     height: 187px;
-    flex-shrink: 0;
-}
-.project__image {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 .project__footer {
@@ -346,6 +342,7 @@ a {
 .interactive__title {
     margin-top: 10px;
     color: #080415;
+    text-align: center;
 }
 .interactive__desc {
     margin-top: 15px;
@@ -356,7 +353,7 @@ a {
 }
 .interactive__stat {
     display: flex;
-    align-items: center;
+
     justify-content: center;
     gap: 150px;
     width: min(946px, 100%);
@@ -387,6 +384,7 @@ a {
 .interactive__video {
     margin-top: 70px;
 }
+
 .interactive__video-container {
     position: relative;
     width: 100%;
@@ -405,11 +403,15 @@ a {
     height: 111px;
     z-index: 2;
 }
-.interactive__video-intro {
+.myVideo {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1;
 }
+
 .interactive__video--play::before {
     position: relative;
     content: "";
@@ -443,11 +445,25 @@ a {
 
     font-weight: 700;
 }
+
+/* Khi video đang chạy, ẩn nút play hoặc làm mờ nó */
+.control-btn.is-playing {
+    opacity: 0;
+    visibility: hidden;
+}
+/* Khi di chuột vào container thì hiện lại nút dừng */
+.interactive__video-container:hover .control-btn.is-playing {
+    opacity: 1;
+    visibility: visible;
+}
+
 .evaluate {
     padding: 75px 0;
     background: #fbfaff;
     position: relative;
+    overflow: hidden;
 }
+
 .evaluate__background--01 {
     position: absolute;
     left: 0;
@@ -469,10 +485,31 @@ a {
     text-align: center;
     line-height: 3rem; /* 166.667% */
 }
+.evaluate__content--wapper {
+    width: 100%;
+}
+.evaluate__content--wapper .row {
+    display: flex;
+    flex-wrap: nowrap; /* Ngăn các thẻ card nhảy xuống hàng dưới */
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    scroll-snap-type: x mandatory; /* Giúp card tự động "khớp" vào giữa khi vuốt */
+    gap: 15px; /* Khoảng cách giữa các thẻ */
+    padding-bottom: 20px; /* Tránh bị mất bóng đổ (box-shadow) bên dưới */
+    -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone */
+}
+.evaluate__content--wapper {
+    scroll-snap-align: start; /* Điểm dừng khi cuộn */
+}
+.evaluate__content--wapper .row::-webkit-scrollbar {
+    display: none;
+}
+.evaluate__content-col {
+    display: block;
+}
 .evaluate__content {
+    width: 100%;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     margin-top: 60px;
 }
@@ -520,6 +557,7 @@ a {
     margin-top: 90px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
 }
 .dot {
@@ -531,7 +569,7 @@ a {
 
     background: #08041533;
 }
-.evaluate__pagination--active {
+.pagination__active {
     width: 20px;
     height: 20px;
     background: #5d3bee;
@@ -678,9 +716,10 @@ a {
 }
 .contact__section {
     padding: 68px 0;
-    height: 488px;
+
     background: #fbfaff;
     position: relative;
+    overflow: hidden;
 }
 .contact__background--01 {
     position: absolute;
