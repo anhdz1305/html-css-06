@@ -9,6 +9,10 @@
         <link rel="stylesheet" href="./asset/css/grid.css" />
         <link rel="stylesheet" href="./asset/css/responsive.css" />
         <link rel="stylesheet" href="./asset/css/style.css" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,7 +102,7 @@
         <header class="header sticky">
             <div class="container-header">
                 <div class="header-content">
-                    <a class="email">
+                    <a href="mailto:hi@arif.interactive" class="email">
                         <span class="email__img">
                             <img
                                 src="./asset/img/email-nav.png"
@@ -143,9 +147,11 @@
             </a>
 
             <div class="button-mobile">
-                <span class="email__img">
-                    <img src="./asset/img/email-nav.png" alt="email-icon" />
-                </span>
+                <a href="mailto:hi@arif.interactive">
+                    <span class="email__img">
+                        <img src="./asset/img/email-nav.png" alt="email-icon" />
+                    </span>
+                </a>
                 <div class="menu-mobile">
                     <input
                         type="checkbox"
@@ -198,11 +204,13 @@
                 <div class="hero-background">
                     <img
                         class="hero-background__01"
+                        data-aos="fade-right"
                         src="./asset/img/hero-background-01.png"
                         alt="Background"
                     />
                     <img
                         class="hero-background__02"
+                        data-aos="fade-left"
                         src="./asset/img/hero-background-02.png"
                         alt="Background"
                     />
@@ -210,6 +218,7 @@
                         <div class="hero__container">
                             <div class="row">
                                 <div
+                                    data-aos="fade-up"
                                     class="hero__img--wapper col-md-6 col-sm-12 col-12"
                                 >
                                     <img
@@ -221,7 +230,10 @@
                                 <div
                                     class="hero__content--wapper offset-md-1 col-md-5 col-sm-12 col-12"
                                 >
-                                    <div class="hero__content">
+                                    <div
+                                        class="hero__content"
+                                        data-aos="fade-left"
+                                    >
                                         <h1 class="hero__title">
                                             An Interactive Designer
                                         </h1>
@@ -233,7 +245,45 @@
                                         </p>
                                         <div class="hero__btn">
                                             <button class="btn">
-                                                Book a Call
+                                                <div class="wrapper">
+                                                    <span>Book a Call</span>
+                                                    <div
+                                                        class="circle circle-12"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-11"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-10"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-9"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-8"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-7"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-6"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-5"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-4"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-3"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-2"
+                                                    ></div>
+                                                    <div
+                                                        class="circle circle-1"
+                                                    ></div>
+                                                </div>
                                             </button>
                                             <button class="hero__btn--link">
                                                 My Works
@@ -248,7 +298,7 @@
             </div>
             <div class="client">
                 <div class="container">
-                    <section class="client-section">
+                    <section class="client-section" data-aos="fade-up-left">
                         <div class="row">
                             <div class="col-md-4 col-sm-12 col-12">
                                 <div class="client__header">
@@ -353,7 +403,7 @@
             <div class="specialities">
                 <div class="container">
                     <section class="specialities-section">
-                        <div class="specialities__header">
+                        <div class="specialities__header" data-aos="fade-right">
                             <h2 class="specialities__title font__title">
                                 Specialities
                             </h2>
@@ -367,7 +417,10 @@
                         <div class="specialities__grid">
                             <div class="row">
                                 <div class="col-md-4 col-sm-12 col-12">
-                                    <div class="speciality__card">
+                                    <div
+                                        class="speciality__card"
+                                        data-aos="flip-left"
+                                    >
                                         <div class="speciality__icon--wrapper">
                                             <img
                                                 src="./asset/img/product-design-icon.png"
@@ -387,7 +440,10 @@
                                 </div>
 
                                 <div class="col-md-4 col-sm-12 col-12">
-                                    <div class="speciality__card">
+                                    <div
+                                        class="speciality__card"
+                                        data-aos="flip-left"
+                                    >
                                         <div class="speciality__icon--wrapper">
                                             <img
                                                 src="./asset/img/UI-UX-Design-icon.png"
@@ -407,7 +463,10 @@
                                 </div>
 
                                 <div class="col-md-4 col-sm-12 col-12">
-                                    <div class="speciality__card">
+                                    <div
+                                        class="speciality__card"
+                                        data-aos="flip-left"
+                                    >
                                         <div class="speciality__icon--wrapper">
                                             <img
                                                 src="./asset/img/interactive-design-icon.png"
@@ -435,7 +494,7 @@
                     </section>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-aos="fade-up">
                 <div class="container">
                     <section class="project__section">
                         <div class="project__header">
@@ -465,16 +524,21 @@
                                 class="row row-cols-md-2 row-cols-sm-1 row-cols-1"
                             >
                                 <div class="col">
-                                    <article class="project__card">
+                                    <article
+                                        class="project__card"
+                                        data-aos="fade-right"
+                                    >
                                         <div class="project__card--background">
                                             <img
                                                 src="./asset/img/background-card.png"
                                             />
                                         </div>
                                         <div class="project__info">
-                                            <h3 class="project__name">
-                                                Wally Website
-                                            </h3>
+                                            <a href="#!">
+                                                <h3 class="project__name">
+                                                    Wally Website
+                                                </h3>
+                                            </a>
                                             <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
@@ -492,16 +556,21 @@
                                 </div>
 
                                 <div class="col">
-                                    <article class="project__card">
+                                    <article
+                                        class="project__card"
+                                        data-aos="fade-left"
+                                    >
                                         <div class="project__card--background">
                                             <img
                                                 src="./asset/img/background-card.png"
                                             />
                                         </div>
                                         <div class="project__info">
-                                            <h3 class="project__name">
-                                                Banking App
-                                            </h3>
+                                            <a href="#!">
+                                                <h3 class="project__name">
+                                                    Banking App
+                                                </h3>
+                                            </a>
                                             <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
@@ -519,16 +588,21 @@
                                 </div>
 
                                 <div class="col">
-                                    <article class="project__card">
+                                    <article
+                                        class="project__card"
+                                        data-aos="fade-right"
+                                    >
                                         <div class="project__card--background">
                                             <img
                                                 src="./asset/img/background-card.png"
                                             />
                                         </div>
                                         <div class="project__info">
-                                            <h3 class="project__name">
-                                                Web App
-                                            </h3>
+                                            <a href="#!">
+                                                <h3 class="project__name">
+                                                    Web App
+                                                </h3>
+                                            </a>
                                             <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
@@ -546,16 +620,21 @@
                                 </div>
 
                                 <div class="col">
-                                    <article class="project__card">
+                                    <article
+                                        class="project__card"
+                                        data-aos="fade-left"
+                                    >
                                         <div class="project__card--background">
                                             <img
                                                 src="./asset/img/background-card.png"
                                             />
                                         </div>
                                         <div class="project__info">
-                                            <h3 class="project__name">
-                                                Oculus Website
-                                            </h3>
+                                            <a href="#!">
+                                                <h3 class="project__name">
+                                                    Oculus Website
+                                                </h3>
+                                            </a>
                                             <p class="project__desc font__desc">
                                                 Lorem ipsum dolor amet,
                                                 consectetur adipiscing st elit.
@@ -576,7 +655,21 @@
 
                         <div class="project__footer">
                             <button href="#" class="btn btn-all-project">
-                                All Project
+                                <div class="wrapper">
+                                    <span>All Project</span>
+                                    <div class="circle circle-12"></div>
+                                    <div class="circle circle-11"></div>
+                                    <div class="circle circle-10"></div>
+                                    <div class="circle circle-9"></div>
+                                    <div class="circle circle-8"></div>
+                                    <div class="circle circle-7"></div>
+                                    <div class="circle circle-6"></div>
+                                    <div class="circle circle-5"></div>
+                                    <div class="circle circle-4"></div>
+                                    <div class="circle circle-3"></div>
+                                    <div class="circle circle-2"></div>
+                                    <div class="circle circle-1"></div>
+                                </div>
                             </button>
                         </div>
                     </section>
@@ -585,11 +678,11 @@
             <div class="interactive">
                 <div class="container">
                     <section class="interactive__section">
-                        <div class="interactive__header">
+                        <div class="interactive__header" data-aos="zoom-out-up">
                             <p class="interactive__greeting">
                                 Hey,,,It's Arif
                                 <span class="interactive__greeting--icon">
-                                    👋
+                                    <img src="./asset/img/hi.png" alt="" />
                                 </span>
                             </p>
                             <h2 class="interactive__title font__title">
@@ -604,7 +697,10 @@
 
                         <div class="row">
                             <div class="offset-md-1 col-md-10 col-sm-12 col-12">
-                                <div class="interactive__stat">
+                                <div
+                                    class="interactive__stat"
+                                    data-aos="zoom-out-up"
+                                >
                                     <div class="interactive__stat--item">
                                         <h3 class="interactive__stat--number">
                                             08+
@@ -633,7 +729,7 @@
                             </div>
                         </div>
 
-                        <div class="interactive__video">
+                        <div class="interactive__video" data-aos="zoom-out-up">
                             <div class="interactive__video-container">
                                 <video
                                     id="myVideo"
@@ -673,7 +769,7 @@
                     </section>
                 </div>
             </div>
-            <div class="evaluate">
+            <div class="evaluate" data-aos="zoom-out-up">
                 <img
                     src="./asset/img/background-evaluate-01.png"
                     class="evaluate__background--01"
@@ -894,12 +990,18 @@
                     <div class="row">
                         <div class="col-md-10 col-sm-12 col-12">
                             <section class="faq__section">
-                                <h2 class="faq__title font__title">
+                                <h2
+                                    class="faq__title font__title"
+                                    data-aos="fade-down-right"
+                                >
                                     A few questions <br />
                                     clients normally ask me
                                 </h2>
                                 <div class="faq__list">
-                                    <div class="faq__item">
+                                    <div
+                                        class="faq__item"
+                                        data-aos="fade-down-right"
+                                    >
                                         <input
                                             type="checkbox"
                                             id="faq-1"
@@ -955,7 +1057,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="faq__item">
+                                    <div
+                                        class="faq__item"
+                                        data-aos="fade-down-right"
+                                    >
                                         <input
                                             type="checkbox"
                                             id="faq-2"
@@ -1012,7 +1117,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="faq__item">
+                                    <div
+                                        class="faq__item"
+                                        data-aos="fade-down-right"
+                                    >
                                         <input
                                             type="checkbox"
                                             id="faq-3"
@@ -1068,7 +1176,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="faq__item">
+                                    <div
+                                        class="faq__item"
+                                        data-aos="fade-down-right"
+                                    >
                                         <input
                                             type="checkbox"
                                             id="faq-4"
@@ -1124,7 +1235,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="faq__item">
+                                    <div
+                                        class="faq__item"
+                                        data-aos="fade-down-right"
+                                    >
                                         <input
                                             type="checkbox"
                                             id="faq-5"
@@ -1190,15 +1304,25 @@
                 <div class="container">
                     <section class="atmosphere-section">
                         <header class="atmosphere__header">
-                            <h2 class="atmosphere__title font__title">
+                            <h2
+                                class="atmosphere__title font__title"
+                                data-aos="fade-down-left"
+                            >
                                 My atmosphere
                             </h2>
-                            <p class="atmosphere__desc font__desc">
+                            <p
+                                class="atmosphere__desc font__desc"
+                                data-aos="fade-down-left"
+                            >
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, <br />
                                 non nisl tincidunt ut elementum turpis.
                             </p>
-                            <a href="#!" class="atmosphere__link">
+                            <a
+                                href="#!"
+                                class="atmosphere__link"
+                                data-aos="fade-down-left"
+                            >
                                 @interaction_arif
                             </a>
                         </header>
@@ -1207,7 +1331,10 @@
                             <div class="row">
                                 <div class="col-md-4 col-sm-12 col-12">
                                     <div class="atmosphere__column">
-                                        <div class="atmosphere__img--wrapper">
+                                        <div
+                                            class="atmosphere__img--wrapper"
+                                            data-aos="flip-right"
+                                        >
                                             <img
                                                 src="./asset/img/work-setup-1.jpg"
                                                 alt="Work Setup 1"
@@ -1219,7 +1346,10 @@
 
                                 <div class="col-md-4 col-sm-12 col-12">
                                     <div class="atmosphere__column">
-                                        <div class="atmosphere__img--wrapper">
+                                        <div
+                                            class="atmosphere__img--wrapper"
+                                            data-aos="flip-right"
+                                        >
                                             <img
                                                 src="./asset/img/work-setup-2.jpg"
                                                 alt="Work Setup 2"
@@ -1231,7 +1361,10 @@
 
                                 <div class="col-md-4 col-sm-12 col-12">
                                     <div class="atmosphere__column">
-                                        <div class="atmosphere__img--wrapper">
+                                        <div
+                                            class="atmosphere__img--wrapper"
+                                            data-aos="flip-right"
+                                        >
                                             <img
                                                 src="./asset/img/work-setup-3.jpg"
                                                 alt="Work Setup 3"
@@ -1251,7 +1384,11 @@
                 </div>
             </div>
             <div class="contact">
-                <div class="container-header">
+                <div
+                    class="container-header"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                >
                     <section class="contact__section">
                         <img
                             class="contact__background--01"
@@ -1289,7 +1426,21 @@
 
                             <div class="contact__btn">
                                 <button href="#" class="btn">
-                                    Book a Call
+                                    <div class="wrapper">
+                                        <span> Book a Call</span>
+                                        <div class="circle circle-12"></div>
+                                        <div class="circle circle-11"></div>
+                                        <div class="circle circle-10"></div>
+                                        <div class="circle circle-9"></div>
+                                        <div class="circle circle-8"></div>
+                                        <div class="circle circle-7"></div>
+                                        <div class="circle circle-6"></div>
+                                        <div class="circle circle-5"></div>
+                                        <div class="circle circle-4"></div>
+                                        <div class="circle circle-3"></div>
+                                        <div class="circle circle-2"></div>
+                                        <div class="circle circle-1"></div>
+                                    </div>
                                 </button>
                             </div>
                         </div>
@@ -1341,9 +1492,9 @@
                     <div class="copyright">
                         <p>©interactiveArif 2021. All rights reserved.</p>
                         <div class="copyright__link">
-                            <p>Privacy Policy</p>
+                            <a href="#!">Privacy Policy</a>
                             <span class="copyright__link--rect"></span>
-                            <p>Terms of Conditions</p>
+                            <a href="#!">Terms of Conditions</a>
                         </div>
                     </div>
                 </div>
@@ -1405,5 +1556,9 @@
             </div>
         </footer>
         <script src="./asset/js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
